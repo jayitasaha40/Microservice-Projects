@@ -1,0 +1,22 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb+srv://aidanschiller6:97m6RGYJlU4tjfBa@clusterjayi.qf9ii.mongodb.net/mydatabase?retryWrites=true&w=majority
+
+  config:
+    import: configserver:http://localhost:8085
+
+#  profiles:
+#    active: dev
+
+#eureka:
+#  instance:
+#    prefer-ip-address: true
+#  client:
+#    fetch-registry: true
+#    register-with-eureka: true
+#    service-url:
+#      defaultZone: http://localhost:8761/eureka
+##      This will come from Config Server
+
+
