@@ -14,6 +14,22 @@ spring:
       hibernate:
         dialect: org.hibernate.dialect.MySQL8Dialect
 
+
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: https://dev-77685852.okta.com/oauth2/default
+
+      client:
+        registration:
+          my-internal-client:
+            provider: okta
+            client-id: 0oakhzm65xmIEw7Mv5d7
+            client-secret: tfx-puR6RufrIUshX9fy4IN6LRLQA2lqOTafCKYgR0tnnPPschUzj-mtz0kRxlFL
+            authorization-grant-type: client_credentials
+            scope: internal
+
 eureka:
   instance:
     prefer-ip-address: true
@@ -68,3 +84,8 @@ resilience4j:
         timeoutDuration: 0
         registerHealthIndicator: true
         eventConsumerBufferSize: 100
+
+okta:
+  oauth2:
+    issuer: https://dev-77685852.okta.com/oauth2/default
+    audience: api://default
